@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation in javascript</title>
+    <style>
+        label{
+            display: block;
+            font-size: 1.5rem;
+        }
+        form{
+          height: 550px;
+          border:1px red solid;
+          width: 500px;
+          margin: auto;
+          padding-top:20px;
+          padding-left:150px;
+        }
+        .inp{
+            outline: none;
+            width: 250px;
+            height: 20px;
+        }
+        button{
+            display: block;
+            margin-top:15px;
+            font-size: 1.5rem; 
+        }
+       
+    </style>
+</head>
+<body>
+    <form action=" " onsubmit="return validation();">
+        <h1>My form</h1>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="Name" class="inp">
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="Address" class="inp">
+      <label for="age">Age:</label>
+      <input type="text" id="age" name="Age" class="inp">
+      <label for="Number">Number:</label>
+      <input type="text" id="no" name="Number" class="inp">
+      <label for="mail">Email:</label>
+      <input type="text" id="mail" name="Email" class="inp">
+      <label for="sex">Sex:</label>
+      Male<input type="radio" name="sex" id="male" value="m">
+      Female<input type="radio" name="sex" id="female" value="f">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="Password" class="inp">
+      <button>Submit</button>
+    </form>
+</body>
+<script>
+    function validation(){
+    let name=document.getElementById('name').value;
+    let address= document.getElementById('address').value;
+    let age= document.getElementById('age').value;
+    let no=document.getElementById('no').value;
+    let email=document.getElementById('mail').value;
+    let pass=document.getElementById('password').value;
+    let male=document.getElementById('male').checked;
+    let female=document.getElementById('female').checked;
+    
+    if(name==""){
+        alert("Please input your name!");
+        return false;
+    }
+    if(name.match(/^[A-Za-z]+$/)==null){
+        alert("Name format is not valid!");
+        return false;
+    }
+
+    if(address==""){
+        alert("Please input your address!");
+        return false;
+    }
+    if(address.match(/^[A-Za-z]+$/)==null){
+        alert("Address format is not valid!");
+        return false;
+    }
+
+    if(age==""){
+        alert("Please input your ge!");
+        return false;
+    }
+    if(isNaN(age)){
+        alert("Age must be a number:");
+        return false;
+    }
+    if(age.match(/^[0-9]+$/)==null ){
+        alert("Age format is not valid!");
+        return false;
+    }
+    if((age.length>3)){
+        alert("The age length should be positive and length should not be greater than 3");
+        return false;
+    }
+
+    if(no==""){
+        alert("Please input your number!");
+        return false;
+    }
+    if(isNaN(age)){
+        alert("Number must be a number:");
+        return false;
+    }
+    if(no.match(/^[0-9]+$/)==null ){
+        alert("Number format is not valid!");
+        return false;
+    }
+    if((no.length!=10)){
+        alert("The length of your phone number should exactly equal to 10");
+        return false;
+    }
+
+    if(email==""){
+        alert("Please input your email!");
+        return false;
+    }
+    if(email.match(/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,}$/)==null){
+        alert("Email format is not valid!");
+        return false;
+    }
+
+    
+    if(pass==""){
+        alert("Please input password!");
+        return false;
+    }
+    if(pass.length<6 && pass.length>0){
+        alert("Password length should be greater or equal to 6");
+        return false;
+    }
+    if(male==false && female==false){
+        alert("Please enter your gender!");
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+}
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!-- Write an example with jQuery that will hide a paragraph on clicking a button -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam asked question</title>
+</head>
+<body>
+    <p id="para">This is a paragraph that will hide after clicking a button.</p>
+    <button>Click to hide the paragraph</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+     $(document).ready(function(){
+        $("button").click(function (){
+            $("#para").hide();
+        })
+     })
+    </script>
+</body>
+</html>

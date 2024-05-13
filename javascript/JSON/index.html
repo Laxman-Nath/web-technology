@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript object notation (JSON)</title>
+</head>
+<body>
+    <script>
+        let jsonObj={
+            name:"Laxman",
+            friend:"Rohit",
+            address:"mnr",
+            age:34,
+        };
+        console.log(jsonObj);
+        let myJsonstr=JSON.stringify(jsonObj); // Converting object to string using json
+        console.log(myJsonstr);
+        // Now we can use all string methods to manipulate the myJsonStr
+        myJsonstr=myJsonstr.replace("Laxman","Bikash");
+        myJsonstr=myJsonstr.replace("mnr","dhn");
+        myJsonstr=myJsonstr.replace(34,56);
+        let newJsonObj=JSON.parse(myJsonstr);// Again converting string to object
+        console.log(newJsonObj);
+    </script>
+</body>
+</html>

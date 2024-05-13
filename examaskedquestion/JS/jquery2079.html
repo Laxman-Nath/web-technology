@@ -1,0 +1,22 @@
+<!-- Write an html script to create a div with id mydiv.The position of div should be set to absolute .Now show the use of animate method to the div element to right by 300px -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam asked question</title>
+</head>
+<body>
+    <div id="mydiv" style="position: absolute; background-color: yellow;">This is a div with id mydiv.</div>
+    <button style="margin-top:100px;">Click to animate</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#mydiv").animate({right:"300px"});
+            });
+        });
+    </script>
+</body>
+</html>

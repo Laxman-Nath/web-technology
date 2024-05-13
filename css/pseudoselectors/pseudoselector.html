@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo selctors in css</title>
+    <style>
+      /* Unvisited link*/
+      a:link{
+        color:red;
+      }
+      /*visited link*/
+      a:visited{
+        color:green;
+      }
+      /* mouse over link*/
+      a:hover{
+        color:hotpink;
+      }
+      /* selected link*/
+      a:active{
+        color:blue;
+      }
+    </style>
+</head>
+<body>
+    <h2>Styling a link depending on a state</h2>
+
+    <p><b><a href="https://www.facebook.com" target="_blank">Go to facebook</a></b></p>
+    <p><b>Note:</b>a:hover must come after a:link and a:visited in the CSS definition in order to be effective.</p>
+    <p><b>Note:</b>a:active must come after a:hover in the CSS definition in order to be effective.</p>
+</body>
+</html>

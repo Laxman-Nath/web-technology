@@ -1,0 +1,30 @@
+<!--  Create a html page containing a division with image and its description paragraph.Write a javascript function to change the value of description in the paragraph during onmouseover and mouseout on the image -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2076 asked question</title>
+</head>
+
+<body>
+    <div>
+        <img src="3.jpg" height="200px" width="200px" alt="" onmouseover="show()" onmouseout="hide()">
+        <p style="display: none;">This photo is a cover photo of famous bollywood song heeriye heeriye.The singer was
+            famous bollywood singer arjit singh.</p>
+    </div>
+</body>
+<script>
+    let elem = document.getElementsByTagName('p')[0];
+    function show() {
+        elem.style.display = "block";
+    }
+    function hide() {
+        elem.style.display = "none";
+
+    }
+</script>
+
+</html>

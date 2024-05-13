@@ -1,0 +1,15 @@
+div{
+    border:2px red solid;
+    padding:40px;
+    margin:2px 3px;
+    height: 500px;
+}
+p{
+    border:1px yellow solid;
+    padding:3px;
+    margin:1px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

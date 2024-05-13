@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <a href="https://www.facebook.com" target="_blank">Go to facebook</a>
+    <a href="https://www.google.com" target="_blank">Go to google</a>
+    <a href="https://www.youtube.com" target="_blank">Go to youtube</a>
+    <button onclick="showLink()">Click me</button>
+</body>
+<script>
+     function showLink(){
+      let link=document.getElementsByTagName('a');
+    //   for(let i=0;i<link.length;i++){
+    //     let l=link[i].getAttribute("href");
+    //     window.open(l,"_blank");
+    // }
+
+    let l1=link[0].getAttribute("href");
+        window.open(l1,"_blank");
+    let l2=link[1].getAttribute("href");
+        window.open(l2,"_blank");
+    }
+</script>
+</html>

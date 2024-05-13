@@ -1,0 +1,72 @@
+<!-- Design a form containing text box for username,password field for password,radio button for gender and hobbies .Write a program for client side validation of the form for the username and password fields as required fields,length of username should be 5,the radio button and checkbox should be checked.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam asked question</title>
+</head>
+
+<body>
+    <form action="" method="post" action="#" onsubmit=" return validateForm()">
+        <div>
+            <label for="">Username:</label>
+            <input type="text" name="username" id="username" required>
+        </div><br>
+        <div>
+            <label for="">Password:</label>
+            <input type="password" name="password" id="password" required>
+        </div><br>
+        <div>
+            <label for="">Gender:</label>
+            <label for=""> <input type="radio" value="m" name="gender">Male</label>
+            <label for=""> <input type="radio" value="f" name="gender">Female </label>
+            <label for=""> <input type="radio" value="o" name="gender">Others</label>
+        </div><br>
+        <div>
+            <label for="">Hobbies:</label>
+            <label for=""><input type="checkbox" name="hobbies">Reading</label>
+            <label for=""><input type="checkbox" name="hobbies">Playing</label>
+            <label for=""><input type="checkbox" name="hobbies">Coding</label>
+            <label for=""><input type="checkbox" name="hobbies">Music</label>
+        </div><br>
+
+        <button >Submit</button>
+
+    </form>
+</body>
+<script>
+    function validateForm(){
+        let uname=document.getElementById('username');
+        let password=document.getElementById('password');
+        let gender=document.getElementsByName('gender');
+        let hobbies=document.getElementsByName('hobbies');
+        let genderSelect=(gender[0].checked || gender[1].checked || gender[2].checked);
+        let hobbiesSelect=(hobbies[0].checked || hobbies[1].checked || hobbies[2].checked);
+        if(uname.value == ""){
+            alert("UserName cannot be empty");
+            return false;
+        }
+        else if(uname.value.length !== 5){
+            alert("User name should have 5 characters");
+            return false;
+        }
+        else if(password.value ==""){
+            alert("Password cannot be left empty!");
+            return false;
+        }
+        else if(!(genderSelect)){
+            alert("Please select gender!");
+            return false;
+        }
+        else if(!(hobbiesSelect)){
+            alert("Please select at least one hobby!");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+</html>

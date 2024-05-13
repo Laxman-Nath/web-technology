@@ -1,0 +1,27 @@
+<!-- Write a javascript code to handle cookie -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exam asked question</title>
+</head>
+<body>
+    <button onclick="setCookie()">setCookie</button>
+    <button onclick="getCookie()">getCookie</button>
+    <script>
+      function setCookie(){
+        document.cookie="username=Laxman";
+      }
+      function getCookie(){
+        if(document.cookie.length!=0){
+            alert(document.cookie);
+        }
+        else{
+            alert("Cookie does not exist");
+        }
+      }
+    </script>
+</body>
+</html>

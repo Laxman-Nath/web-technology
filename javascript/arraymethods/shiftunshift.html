@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shift and unshift method in javascript</title>
+</head>
+<body>
+    <script>
+        let clz=["snsc","lba","fwu"];
+       let value1= clz.shift();
+        document.write("After shifting the array becomes:<br>");
+        document.write("The value returned by shift method is:"+value1+"<br>");
+        for(let i in clz){
+            document.write(clz[i]+"<br><br>");
+        }
+
+       let value2= clz.unshift("laxman");
+        document.write("After unshifting the array becomes:<br>");
+        document.write("The value returned by Unshift method is:"+value2+"<br>");
+        for(let i in clz){
+            document.write(clz[i]+"<br><br>");
+        }
+    </script>
+</body>
+</html>

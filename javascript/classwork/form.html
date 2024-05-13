@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classwork</title>
+    <style>
+        .container {
+            border: 1px black solid;
+            width: 500px;
+            height: 300px;
+            margin: auto;
+            text-align: center;
+        }
+        label{
+            font-size:1.8rem;
+        }
+        input{
+            outline: none;
+            width:350px;
+            height:30px;
+            font-size: 1.5rem;
+        }
+       .container button{
+            height: 30px;
+            width:90px;
+            font-size: 1.3rem;
+            margin-right:10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Our details</h1>
+        <label for="nam">Name:</label>
+        <input type="text" name="name" id="nam" value="laxman"><br><br>
+        <label for="mail">Email:</label>
+        <input type="email" value="nathlaxman242@gmail.com" id="mail"><br><br>
+        <button onclick="display()">Check</button>
+        <button onclick="change()">Change</button>
+
+        <p id="showName"></p>
+        <p id="showEmail"></p>
+    </div>
+
+    <script>
+        let elem1 = document.getElementById('nam');
+        let elem2 = document.getElementById('mail');
+        function display() {
+            
+            document.getElementById('showName').innerHTML = "Your name is:" + elem1.value;
+            document.getElementById('showEmail').innerHTML = "Your email is:" + elem2.value;
+
+        }
+        function change(){
+            if(confirm("Do you really want to change the data?")){
+                elem1.value=" ";
+                elem2.value=" ";
+            }
+        }
+    </script>
+</body>
+
+</html>

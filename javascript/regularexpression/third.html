@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular expression in Javascript</title>
+</head>
+<body>
+    Email:<input type="text" id="email">
+    <button onclick="check()">Click me</button>
+    <script>
+        function check(){
+        let n=document.getElementById('email').value;
+        if(email.match(/^[A-Za-z0-9]+@[A-Za-z]+.[A-Za-z]{2,}$/) ==null){
+            alert("email format is not valid:");
+        }
+    }
+    // /[A-Za-z]+--> it means string to be compared can contain upper case or lower case alphabet any number of times(+ means can be repeated any number of times)
+    </script>
+</body>
+</html>

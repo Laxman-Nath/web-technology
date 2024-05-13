@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm box in javascript/title>
+    <style>
+        body{
+            background-color:antiquewhite;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:400px;
+        }
+        .container button{
+            font-size: 1.7rem;
+            border:2px red solid;
+            border-radius: 23px;
+            color:aqua;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="show()">Click it</button>
+       
+    </div>
+    <script>
+        function show(){
+            if(confirm("Do you really want to confirm?")){
+                document.write("You clicked ok");
+            }
+            else{
+                document.write("You clicked cancel");
+            }
+        }
+    </script>
+</body>
+</html>

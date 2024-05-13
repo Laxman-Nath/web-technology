@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple music player</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player">
+        <!--  Defining the section for displaying details -->
+        <div class="details">
+        <div class="now-playing">PLAYING x OF  y</div>
+        <div class="track-art"></div>
+        <div class="track-name">Track Name</div>
+        <div class="track-artist">Track Artist</div>
+    </div>
+
+    <!-- Defining the sections for displaying track buttons  -->
+    <div class="buttons">
+        <div class="prev-track" onclick="prevTrack()">
+            <i class="fa fa-step-backward fa-2x"></i>
+        </div>
+        <div class="playpause-track" onclick="playPause()">
+            <i class="fa fa-play-circle fa-5x"></i>
+        </div>
+        <div class="next-track" onclick="nextTrack()">
+            <i class="fa fa-step-forward fa-2x"></i>
+        </div>
+    </div>
+
+    <!-- Defining the section for displaying the seek slider -->
+    <div class="slider-container">
+        <div class="current-time">00:00</div>
+        <input type="range" min="1" max="100" value="0" class="seek-slider" 
+        onchange="seekTo()">
+        <div class="total-duration">00:00</div>
+    </div>
+
+    <!-- Defining the section for displaying the volume slider -->
+    <div class="slider-container">
+        <div class="volume-down">
+        <i class="fa fa-volume-down"></i>
+    </div>
+        <input type="range" min="1" max="100" value="99" class="volume-slider" onchange="setVolume()">
+        <div class="volume-up" id="mute">
+            <i class="fa-solid fa-volume-xmark"></i>
+        <!-- <i class="fa fa-volume-up" ></i> -->
+    </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

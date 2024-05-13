@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<body>
+    <form action="" name="myForm" onsubmit="return(validate())">
+        <table cellspacing="2" cellpadding="2" border="1">>
+            <tr>
+                <td align="right">Name</td>
+                <td><input type="text" name="Name" id=""></td>
+            </tr>
+            <tr>
+                <td align="right">Email</td>
+                <td><input type="email" name="Email" id=""></td>
+            </tr>
+            <tr>
+                <td align="right">Zip code</td>
+                <td><input type="text" name="zip" id=""></td>
+            </tr>
+            <tr>
+                <td align="right">Country</td>
+                <td>
+                    <select name="Country" id="">
+                        <option value="-1" selected>[choose your]</option>
+                        <option value="1">Nepal</option>
+                        <option value="1">India</option>
+                        <option value="1">Australia</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <!-- <td align="right" ></td> -->
+                <td colspan="2" style="text-align: center;" ><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function validate(){
+        if(document.myForm.Name.value==""){
+            alert("Please provide your name!");
+            return false;
+        }
+        if(document.myForm.Email.value==""){
+            alert("Please provide your email!");
+            return false;
+        }
+        if(document.myForm.zip.value=="" || isNaN(document.myForm.zip.value) || document.myForm.zip.value.length!=5){
+            alert("Please provide your valid zip code!");
+            return false;
+        }
+        if(document.myForm.zip.value=="" || isNaN(document.myForm.zip.value) || document.myForm.zip.value.length!=5){
+            alert("Please provide a zip in the format #####!");
+            document.myForm.zip.focus();
+            return false;
+        }
+        if(document.myForm.Country.value=="-1"){
+            alert("Please provide your country!");
+            return false;
+        }
+        
+    }
+</script>
+</html>

@@ -1,0 +1,15 @@
+div{
+    position:fixed;
+    border: 2px solid;
+
+}
+#p1{
+    position: relative;
+    font-style: arial;
+    color:red;
+}
+#p2{
+    position: absolute;
+    top: 0px;
+    left:200px;
+}

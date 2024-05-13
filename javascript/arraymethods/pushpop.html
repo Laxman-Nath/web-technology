@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push and pop methods in array</title>
+</head>
+<body>
+    <script>
+        let names=["Ramesh","bikash","harish","rohit"];
+        document.write("The length of this array is:"+names.length+"<br><br>");
+
+        names.push("laxman");
+        document.write("After pushing laxman the array becomes:<br>")
+        for(let i in names){
+            document.write(names[i]+"<br><br>");
+        }
+        names.pop();
+        document.write("After popping the array becomes:<br>")
+        for(let i in names){
+            document.write(names[i]+"<br><br>");
+        }
+    </script>
+</body>
+</html>

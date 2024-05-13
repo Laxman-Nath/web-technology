@@ -1,0 +1,55 @@
+<!-- Write a html scritp for creating a form containing text box for username,password field for password,and checkbox for educational fields.Write a js function for the validation of the form for the fields as required.In addition,length of username should be at least 4,the password should start with digit and end with $ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model question</title>
+</head>
+<body>
+    <form action="" onsubmit="return validation()">
+    <div>
+        <label for="">Username:</label>
+        <input type="text" name="" id="username" required>
+    </div><br>
+    <div>
+        <label for="">Password:</label>
+        <input type="password" id="password" name="password" required>
+    </div><br>
+    <div>
+        <label for="">Qualification:</label>
+        <label for="" ><input type="checkbox" name="Qualification">+2</label>
+        <label for=""><input type="checkbox" name="Qualification">Bachelor</label>
+        <label for=""><input type="checkbox" name="Qualification">Masters</label>
+        
+    </div><br>
+    <button>Submit</button>
+</form>
+</body>
+<script>
+    function validation(){
+    let uname=document.getElementById("username").value;
+    let pass=document.getElementById('password').value;
+    let quali=document.getElementsByName('Qualification');
+    let isQuali=(quali[0].checked || quali[1].checked || quali[2].checked);
+    if(uname==""){
+        alert("Please enter the name!");
+        return false;
+    }
+    else if(uname.length<4){
+        alert("The length of username should be greater than or equal to 4");
+        return false;
+    }
+    else if(pass.match(/[0-9][a-zA-Z0-9]*[a-zA-Z0-9][$]/)==null){
+        alert("password format is not valid!");
+        return false;
+    }
+    else if(!isQuali){
+        alert("Please select at least one qualification!");
+        return false;
+    }
+    return true;
+}
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth child selector in css</title>
+    <style>
+        p:nth-child(odd){
+            background:yellow;
+        }
+        p:nth-child(even){
+            color:black;
+        }
+        p:nth-child(2n+0){
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>This is first paragraph</p>
+    <p>This is second paragraph</p>
+    <p>This is third paragraph</p>
+    <p>This is fourth paragraph</p>
+    <p>This is fifth paragaph</p>
+</body>
+</html>

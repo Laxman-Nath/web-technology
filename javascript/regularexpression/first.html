@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to regualar expression</title>
+</head>
+<body>
+    <h2>Javascript regualar expression</h2>
+    <p>Do a case-insensitive search for "laxman" in a string</p>
+    <p id="demo"></p>
+    <script>
+        let text="My name is LAXMAN nath ";
+        let pattern=/laxman/i;
+        let result=text.match(pattern);
+        document.getElementById('demo').innerHTML=result;
+    </script>
+    <!-- /laxman/i  -- the string that is to be compared should container laxman irrespective of cases(i means case insensitive) -->
+</body>
+</html>

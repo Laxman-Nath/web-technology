@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handling cookies in javascript</title>
+</head>
+<body>
+    <button  onclick="setCookie()">SetCookie</button>
+    <button onclick="getCookie()">GetCookie</button>
+    <script>
+        function setCookie(){
+            document.cookie="username=Laxman";
+        }
+        function getCookie(){
+            if(document.cookie.length!=0){
+                alert(document.cookie);
+            }
+            else{
+                alert("Cookie not available");
+            }
+        }
+    </script>
+</body>
+</html>

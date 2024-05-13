@@ -1,0 +1,35 @@
+<!-- Write a html script containing the use of media query for changing the background-color of html page to black if the viewport is 600pixels wide or more than that otherwise if the viewport is less than 500pixels,the background color should be changed to red -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asked in model question</title>
+    <style>
+        .container{
+            border:2px blue solid;
+            width:100px;
+            height: 300px;
+            margin:200px auto;
+        }
+        @media only  screen and (min-width:600px) {
+            body{
+                background-color: black;
+                color:white;
+            }
+        }
+        @media  screen and (max-width:500px) {
+            body{
+                background-color:red;
+                color:white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        This is a div with class container.
+    </div>
+</body>
+</html>

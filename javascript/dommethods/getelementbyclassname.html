@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM methods</title>
+</head>
+<body>
+    <h1 class="para"></h1>
+    <p class="para"></p>
+    <button onclick="show()">Click me</button>
+   
+</body>
+<script>
+    function show() {
+        let elem=document.getElementsByClassName('para');
+        for(let i in elem){
+         elem[i] .innerHTML="This is a method which target element with para classes";
+        // console.log("hello")
+        }
+    }
+</script>
+</html>

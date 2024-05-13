@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute position in css</title>
+    <style>
+         div.relative{
+            position: relative;
+            text-align: center;
+            border: 2px red solid;
+            height:300px;
+            width: 500px;
+        }
+        div.absolute{
+            position: absolute;
+            top:80px;
+            right:0;
+            width:200px;
+            height:100px;
+            border:3px yellow solid;
+        }
+    </style>
+</head>
+<body>
+       <h2>Position:absolute;</h2>
+       <p>An element with position:absolute; is positioned relative to the nearest positioned ancestor(instead of positioned relative to the viewport,like fixed)</p>
+    <p>An element with position: relative; is positioned relative to it's normal position</p>
+    <div class="relative">
+        This element has position:relative;
+    
+    <div class="absolute">
+        This element has position:absolute;
+    </div>
+</div>
+</body>
+</html>

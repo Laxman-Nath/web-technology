@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inline block in html</title>
+    <style>
+        span.a{
+            display: inline;  /*by default*/
+            width:100px;
+            height:100px;
+            padding: 5px;
+            border:1px solid blue;
+            background-color: yellow;
+        }
+        span.b{
+            display: inline-block;  /*not by default*/
+            width:100px;
+            height:100px;
+            padding: 5px;
+            border:1px solid blue;
+            background-color: yellow;
+        }
+        span.c{
+            display: block;  /*not by default*/
+            width:100px;
+            height:100px;
+            padding:5px;
+            border:1px solid blue;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- allows to set a height and width -->
+    <!-- allow bottom and top margings -->
+    <!-- does not start on a new line -->
+
+    <h1>The display property</h1>
+
+    <h2>display:inline;</h2>
+    <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, nostrum. <span class="a">Lorem, ipsum.</span>
+    <span class="a">Lorem ipsum dolor sit amet.</span></div>
+
+    <h2>display:inline-block;</h2>
+    <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, nostrum. <span class="b">Lorem, ipsum.</span>
+    <span class="b">Lorem ipsum dolor sit amet.</span></div>
+
+    <h2>display:block;</h2>
+    <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, nostrum. <span class="c">Lorem, ipsum.</span>
+    <span class="c">Lorem ipsum dolor sit amet.</span></div>
+</body>
+</html>

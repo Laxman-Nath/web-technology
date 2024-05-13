@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element selector in jQuery</title>
+</head>
+<body>
+    <h2>This is heading</h2>
+    <p class="para">This is a paragraph.</p>
+    <p class="para">This is another paragraph.</p>
+    <button>Click me to hide the paragraphs</button>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(".para").hide();
+            });
+        });
+    </script>
+</body>
+</html>
